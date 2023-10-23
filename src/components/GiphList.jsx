@@ -1,9 +1,12 @@
 import React from 'react'
-import Modal from 'react-bootstrap/Modal';
+import GiphListItem from '../components/GiphListItem'
 
-
-export default function GiphList() {
+export default function GiphList({ gifs }) {
   return (
-    <div>GiphList</div>
+        <div>
+      {gifs.map((gif) => (
+        <GiphListItem key={gif.id} gif={gif} />
+      ))}
+    </div>
   )
 }
